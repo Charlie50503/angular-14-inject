@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { UserService } from './user.service';
 import { DataListComponent } from './data-list/data-list.component';
+import { Page1Component } from './page1/page1.component';
+import { Page2Component } from './page2/page2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    DataListComponent
+    DataListComponent,
+    Page1Component,
+    Page2Component
   ],
   imports: [
     BrowserModule,
