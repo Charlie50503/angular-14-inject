@@ -5,7 +5,7 @@ import { UserService } from './user.service';
   providedIn: 'root'
 })
 export class AlertBaseService {
-  userService = inject(UserService)
+  // userService = inject(UserService)
   constructor(
     // private userService:UserService
   ) { }

@@ -9,6 +9,8 @@ import { UserService } from './user.service';
 import { DataListComponent } from './data-list/data-list.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
+import { BaseButtonComponent } from './base-button/base-button.component';
+import { WarningButtonComponent } from './warning-button/warning-button.component';
 
 export interface IUserServiceConfig {
   apiUrl: string
@@ -23,7 +25,9 @@ export const USERS_SERVICE_TOKEN_CONFIG = new InjectionToken<IUserServiceConfig>
     UserComponent,
     DataListComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
+    BaseButtonComponent,
+    WarningButtonComponent
   ],
   imports: [
     BrowserModule,
