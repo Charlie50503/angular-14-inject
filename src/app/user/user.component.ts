@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
 import { UserService } from '../user.service';
 
 @Component({
@@ -15,12 +15,20 @@ export class UserComponent {
   //   // this.name = this.userService.userInfo.name
   // }
 
-  // angular 14 寫法
-  name:string = "";
-  userService = inject(UserService);
-
+    name:string = "";
+  // 方法一 使用自定義名稱
   constructor(
+    @Inject("USERS_SERVICE") private userService:UserService
   ){
     this.name = this.userService.userInfo.name
   }
+
+  // angular 14 寫法
+  // name:string = "";
+  // userService = inject(UserService);
+
+  // constructor(
+  // ){
+  //   this.name = this.userService.userInfo.name
+  // }
 }

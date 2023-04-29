@@ -24,7 +24,9 @@ import { Page2Component } from './page2/page2.component';
     HttpClientModule
   ],
   providers: [
-    UserService // 方法一
+    // UserService // 方法一
+    // {provide:UserService,useClass:UserService} // 方法一實際上會變成
+    {provide:"USERS_SERVICE",useClass:UserService} // 因為provide只是提供一個唯一名稱,所以我們也可以這樣寫
   ],
   bootstrap: [AppComponent]
 })
